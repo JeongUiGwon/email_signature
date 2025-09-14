@@ -30,13 +30,12 @@ const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
     const positionFont = `12px ${selectedFont}, sans-serif`
     const contactFont = `12px ${selectedFont}, sans-serif`
 
-    let yPosition = 30
+    let yPosition = 40
 
     // ULVAC 로고 이미지 로드 및 그리기
     const logo = new Image()
     logo.onload = () => {
-      // 로고 크기 조정 (높이 30px로 고정)
-      const logoHeight = 30
+      const logoHeight = 35
       const logoWidth = (logo.width * logoHeight) / logo.height
       
       ctx.drawImage(logo, 20, yPosition - logoHeight, logoWidth, logoHeight)
