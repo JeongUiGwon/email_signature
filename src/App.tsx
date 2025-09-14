@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import SignatureForm from './components/SignatureForm'
 import SignaturePreview from './components/SignaturePreview'
+// import AdBanner from './components/AdBanner'
 
 export interface SignatureData {
   name: string
@@ -31,18 +32,40 @@ function App() {
         <p>Enter information and download as JPG file</p>
       </header>
       
-      <main className="app-main">
-        <div className="form-section">
-          <SignatureForm 
-            data={signatureData} 
-            onChange={setSignatureData} 
+      <div className="app-container">
+        {/* 좌측 광고 */}
+        {/* <div className="ad-sidebar ad-left">
+          <AdBanner 
+            adSlot="5539210947"
+            adFormat="vertical"
+            adStyle={{ display: 'block', width: '160px', height: '600px' }}
+            className="sidebar-ad"
           />
-        </div>
-        
-        <div className="preview-section">
-          <SignaturePreview data={signatureData} />
-        </div>
-      </main>
+        </div> */}
+
+        <main className="app-main">
+          <div className="form-section">
+            <SignatureForm 
+              data={signatureData} 
+              onChange={setSignatureData} 
+            />
+          </div>
+          
+          <div className="preview-section">
+            <SignaturePreview data={signatureData} />
+          </div>
+        </main>
+
+        {/* 우측 광고 */}
+        {/* <div className="ad-sidebar ad-right">
+          <AdBanner 
+            adSlot="5539210947"
+            adFormat="vertical"
+            adStyle={{ display: 'block', width: '160px', height: '600px' }}
+            className="sidebar-ad"
+          />
+        </div> */}
+      </div>
     </div>
   )
 }

@@ -27,14 +27,38 @@
   font-size: 1.1rem;
 }
 
-.app-main {
-  max-width: 1200px;
+.app-container {
+  display: flex;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.app-main {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
+  min-width: 0;
+}
+
+.ad-sidebar {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: sticky;
+  top: 2rem;
+}
+
+.ad-sidebar.ad-left {
+  order: -1;
+}
+
+.ad-sidebar.ad-right {
+  order: 1;
 }
 
 /* 폼 섹션 스타일 */
@@ -202,7 +226,42 @@
   text-decoration: underline;
 }
 
+/* 광고 스타일 */
+.ad-banner {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.sidebar-ad {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.sidebar-ad .adsbygoogle {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 /* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .ad-sidebar {
+    display: none;
+  }
+  
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .app-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .app-main {
     grid-template-columns: 1fr;
