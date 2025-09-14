@@ -25,7 +25,7 @@ const SignatureForm: React.FC<SignatureFormProps> = ({ data, onChange }) => {
             id="name"
             value={data.name}
             onChange={(e) => handleInputChange('name', e.target.value)}
-            placeholder="Example: JEONG UI-GWON"
+            placeholder="JEONG UI-GWON"
             required
           />
         </div>
@@ -37,7 +37,7 @@ const SignatureForm: React.FC<SignatureFormProps> = ({ data, onChange }) => {
             id="position"
             value={data.position}
             onChange={(e) => handleInputChange('position', e.target.value)}
-            placeholder="Example: Software Eng'"
+            placeholder="Software Eng'"
             required
           />
         </div>
@@ -49,7 +49,7 @@ const SignatureForm: React.FC<SignatureFormProps> = ({ data, onChange }) => {
             id="team"
             value={data.team}
             onChange={(e) => handleInputChange('team', e.target.value)}
-            placeholder="Example: Control Center Soft Design Team 1 Part"
+            placeholder="Control Center Soft Design Team 1 Part"
             required
           />
         </div>
@@ -61,7 +61,7 @@ const SignatureForm: React.FC<SignatureFormProps> = ({ data, onChange }) => {
             id="phone"
             value={data.phone}
             onChange={(e) => handleInputChange('phone', e.target.value)}
-            placeholder="Example: +82 10- xxxx-xxxx"
+            placeholder="+82 10- xxxx-xxxx"
             required
           />
         </div>
@@ -73,7 +73,7 @@ const SignatureForm: React.FC<SignatureFormProps> = ({ data, onChange }) => {
             id="email"
             value={data.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
-            placeholder="Example: ui-gwon_jeong@ulvac.com"
+            placeholder="ui-gwon_jeong@ulvac.com"
             required
           />
         </div>
@@ -85,7 +85,7 @@ const SignatureForm: React.FC<SignatureFormProps> = ({ data, onChange }) => {
             id="website"
             value={data.website}
             onChange={(e) => handleInputChange('website', e.target.value)}
-            placeholder="Example: https://www.ulvackorea.co.kr"
+            placeholder="https://www.ulvackorea.co.kr"
             required
           />
         </div>
