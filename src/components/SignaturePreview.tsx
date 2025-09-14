@@ -93,6 +93,7 @@ const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
     link.click()
   }
 
+
   useEffect(() => {
     drawSignature()
   }, [data])  
@@ -132,6 +133,10 @@ const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
           Enter information in the left form to display the preview.
         </p>
       )}
+
+      <div className="feedback-section">
+        <p>For bug reports and suggestions, <br/> please email: <a href="mailto:ui-gwon_jeong@ulvac.com" className="feedback-email">ui-gwon_jeong@ulvac.com</a></p>
+      </div>
     </div>
   )
 }
